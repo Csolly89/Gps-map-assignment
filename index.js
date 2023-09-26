@@ -1,10 +1,3 @@
-// let myMap = {
-//     coordinates: [],
-//     businesses: [],
-//     map: {},
-//     markers: {},
-// }
-
 let map = L.map('map').setView([35.07410903689255, -80.65102987195374], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -24,7 +17,7 @@ let polygon = L.polygon([
 
 let redPin = L.icon({
     iconUrl: 'assets/red-pin.png',
-    
+
     iconSize:     [25, 25], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -32,53 +25,26 @@ let redPin = L.icon({
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
+ function Hardcode(){
+    // markers for buisnesses
+    let redDot = L.marker(
+        [35.07602635051466, -80.65380988608088],
+        {icon: redPin}
+    ).bindPopup('Groceries').addTo(map)
 
-// markers for buisnesses
-let redDot = L.marker(
-    [35.07602635051466, -80.65380988608088],
-    {icon: redPin}
-).bindPopup('shop').addTo(map)
+    let lDL = L.marker([35.08429513474555, -80.65942477474634],
+        {icon: redPin}).bindPopup('Gods Chicken').addTo(map)
 
-let lDL = L.marker([35.08429513474555, -80.65942477474634],
-     {icon: redPin}).bindPopup('Groceries').addTo(map)
+    let abc = L.marker([35.068461846219556, -80.64197001040309],
+        {icon: redPin}).bindPopup('Drinks').addTo(map)
 
-let abc = L.marker([35.068461846219556, -80.64197001040309],
-    {icon: redPin}).bindPopup('Drinks').addTo(map)
+    let CC = L.marker([35.083157522158125, -80.66894568825354],
+        {icon: redPin}).bindPopup('Carolina Courts').addTo(map)
 
-let flMkt= L.marker([35.04331758464466, -80.60790045102249],
-    {icon: redPin}).bindPopup('Fleamarket').addTo(map)
+    let fireStone = L.marker([35.069100642671756, -80.63920864517583], 
+        {icon: redPin}).bindPopup('Firestone Garage').addTo(map)
 
-let church = L.marker([35.073329749196276, -80.61847329620886],
-    {icon: redPin}).bindPopup('Church').addTo(map)
-
-let garage = L.marker([35.06822009174712, -80.6390072793132],
-    {icon: redPin}).bindPopup('Automotive Garage').addTo(map)
-
-
-
-
-// async function buisnessApi(){
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//           accept: 'application/json',
-//           Authorization: 'fsq3eFOiM0WOOz/ZqRDOsm0eaVYH/OaiMShN5jy6cTDldCA='
-//         }
-//       };
-      
-//      await fetch('https://api.foursquare.com/v3/places/search', options)
-//         .then(response => response.json())
-//         .then(response => console.log(response))
-//         .catch(err => console.error(err));
-// }
-
-//  queryselector.change example
-// <script >
-//  let dd = document.querySelector("#cars")
-//  dd.addEventListener('change',function(e){
-//  	//what is value of this element
-//     alert(e.target.value)
-//  })</script>
-
-// foursquare key
-// fsq3eFOiM0WOOz/ZqRDOsm0eaVYH/OaiMShN5jy6cTDldCA=
+    let lowes = L.marker([35.06260243371704, -80.63740440761823],
+        {icon: redPin}).bindPopup('Lowes').addTo(map)  
+}
+Hardcode()
