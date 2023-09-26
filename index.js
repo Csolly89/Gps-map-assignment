@@ -37,7 +37,7 @@ let redPin = L.icon({
 let redDot = L.marker(
     [35.07602635051466, -80.65380988608088],
     {icon: redPin}
-).bindPopup('sdfsd').addTo(map)
+).bindPopup('shop').addTo(map)
 
 let lDL = L.marker([35.08429513474555, -80.65942477474634],
      {icon: redPin}).bindPopup('Groceries').addTo(map)
