@@ -25,7 +25,7 @@ let polygon = L.polygon([
 let redPin = L.icon({
     iconUrl: 'assets/red-pin.png',
     
-    iconSize:     [38, 95], // size of the icon
+    iconSize:     [25, 25], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
@@ -39,13 +39,21 @@ let redDot = L.marker(
     {icon: redPin}
 ).bindPopup('sdfsd').addTo(map)
 
- let lDL = L.marker([35.08429513474555, -80.65942477474634],
+let lDL = L.marker([35.08429513474555, -80.65942477474634],
      {icon: redPin}).bindPopup('Groceries').addTo(map)
+
 let abc = L.marker([35.068461846219556, -80.64197001040309],
     {icon: redPin}).bindPopup('Drinks').addTo(map)
-// let = L.marker([]).bindPopup('')
-// let = L.marker([]).bindPopup('')
-// let  = L.marker([]).bindPopup('')
+
+let flMkt= L.marker([35.04331758464466, -80.60790045102249],
+    {icon: redPin}).bindPopup('Fleamarket').addTo(map)
+
+let church = L.marker([35.073329749196276, -80.61847329620886],
+    {icon: redPin}).bindPopup('Church').addTo(map)
+
+let garage = L.marker([35.06822009174712, -80.6390072793132],
+    {icon: redPin}).bindPopup('Automotive Garage').addTo(map)
+
 
 
 
